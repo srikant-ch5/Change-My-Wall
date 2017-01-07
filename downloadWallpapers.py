@@ -2,7 +2,7 @@ import bs4,sys,requests,os,webbrowser,ctypes,random
 
 #ask the user about which type of wallpaper
 
-baseUrl = "http://www.hdwallpapers.in"
+baseUrl = "http://enter the website here.in"
 def topWallpapers():
   pageCount = 1
   dirName = "Top_wallpapers"
@@ -12,7 +12,7 @@ def topWallpapers():
 
   #now time to kickin the req module
   while pageCount <= 1:
-    url = "http://www.hdwallpapers.in/top_download_wallpapers/page/"+str(pageCount)
+    url = "http://Enter the websiter here.in/top_download_wallpapers/page/"+str(pageCount)
 
     htmllayout = requests.get(url)
     htmllayout.raise_for_status()
@@ -58,7 +58,7 @@ def searchWallpapers(queryName):
     os.makedirs(dirName)
 
   while pageCount <= 1:
-    url ="http://www.hdwallpapers.in/search/page/"+str(pageCount)+"?q="+queryName
+    url ="http://Enter the website/search/page/"+str(pageCount)+"?q="+queryName
 
     htmllayout = requests.get(url)
     htmllayout.raise_for_status()
